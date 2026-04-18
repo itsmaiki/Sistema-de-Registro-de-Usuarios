@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Animada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+
+    <div id="register-section" class="card">
+        <h2>Crear Cuenta</h2>
+        <input type="text" id="reg-user" placeholder="Usuario">
+        <input type="password" id="reg-pass" placeholder="Contraseña">
+        <button onclick="register()">Registrarse</button>
+        <p class="switch">¿Ya tienes cuenta? <span onclick="showSection('login-section')">Loguéate</span></p>
+    </div>
+
+    <div id="login-section" class="card hidden">
+        <h2>Bienvenido</h2>
+        <input type="text" id="login-user" placeholder="Usuario">
+        <input type="password" id="login-pass" placeholder="Contraseña">
+        <button onclick="login()">Entrar</button>
+        <p class="switch">¿Eres nuevo? <span onclick="showSection('register-section')">Regístrate</span></p>
+    </div>
+
+    <div id="dashboard-section" class="card hidden">
+        <h2>Comunidad</h2>
+        <p class="hint">Mantén presionado para ver el nombre</p>
+        <div id="bubble-container" class="bubble-grid"></div>
+        <button class="logout-btn" onclick="location.reload()">Cerrar Sesión</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
